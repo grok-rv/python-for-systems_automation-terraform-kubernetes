@@ -1,0 +1,5 @@
+ServerName,Ip Address, InstalledOS
+Ik001,195.0.0.1,Ubuntu
+ik002,195.0.0.2,Suse
+ik003,195.0.0.3,Centos
+ik004,195.0.0.4,Centos
