@@ -1,3 +1,4 @@
+#python for servers.csv
 import subprocess
 lookup_user='root'
 process_running=0
