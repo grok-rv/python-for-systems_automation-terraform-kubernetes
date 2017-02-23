@@ -1,3 +1,4 @@
+#pyhthon for active users
 import subprocess
 users={}
 ps_cmd=subprocess.check_output(['ps','-ef'])
