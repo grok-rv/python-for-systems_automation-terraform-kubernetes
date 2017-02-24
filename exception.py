@@ -1,4 +1,3 @@
-#this is an exception
 try:
     import module
 except Exception as ex:
