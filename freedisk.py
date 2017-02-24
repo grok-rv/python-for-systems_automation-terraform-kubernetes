@@ -1,3 +1,4 @@
+#process disk 
 import subprocess
 partition_usage_threshold=5
 df_cmd=subprocess.check_output(['df','-k'])
