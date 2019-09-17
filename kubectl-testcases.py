@@ -9,10 +9,19 @@ I ran this from "XXX" jump server which can access the server where kubectl comm
 '''
 import paramiko
 import os
+import argparse 
+ 
+parser = argparse.ArgumentParser(description="This python script is used to run kubernetes test cases in NC and output to a kubectl-result-<site>.txt file, where <site> is the Lab ID") 
+parser.add_argument('fqdn', help='pass nc region genesis node fqdn as an argument - example: python scriptname ubuntu.xcompany.com or python scriptname <FQDN of genesis node> or ./scriptname <FQDN of genesis node>') 
+parser.add_argument('usersname', help='pass username of your uam to login to the genesis node- example: ubuntu')
 
-hostname='fqdn of kubectl or genesis server'
-user='username'
-ssh_key='path-to-your-key.pub'
+args = parser.parse_args() 
+
+
+hostname=args.fqdn
+user=args.usersname
+
+ssh_key='/home/username/path-to-your-key.pub'
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect(hostname, username=user, key_filename=ssh_key)
