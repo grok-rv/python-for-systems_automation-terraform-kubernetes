@@ -5,7 +5,7 @@
 import os
 import subprocess
 import time
-path = "/home/rv965d/nc-rdm57b-terraform/os-nc-terraform"
+path = "/home/user/path-to-root-terraform-folder"
 current = os.getcwd()
 print("current directory is %s" % current)
 os.chdir(path)
